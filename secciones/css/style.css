@@ -1,0 +1,177 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background: repeating-linear-gradient(to right, #41484e, #41484e 20px, #000 20px, #000 40px);
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   color: whitesmoke;
+   font-weight: bold;
+   text-align: center;
+}
+
+nav ul, a {
+   color: whitesmoke;
+   display: flex;
+   text-align: center;
+   text-decoration: none;
+   list-style: none;
+
+}
+
+nav ul {
+   display: flex;
+   justify-content: space-around;
+   background-color: #000;
+
+}
+
+main {
+   width: 100vw;
+}
+
+.links-container {
+   background-color: #000;
+   padding-bottom: 10px;
+}
+
+.page-title {
+   padding-top: 10px;
+   margin-bottom: 10px;
+}
+
+.first-link {
+   display: flex;
+}
+
+img {
+   border: #000 solid 2px;
+}
+
+iframe {
+   width: 100%;
+   max-width: 300px;
+   /* display: flex;
+   justify-content: center;
+   align-items: center; */
+   border: #000;
+   aspect-ratio: 16/9;
+}
+
+.spotify-pl{
+   background-color: #000;
+   padding: 15px;
+   margin-bottom: 5px;
+}
+
+footer {
+   padding: 15px;
+   background-color: #000;
+   margin-bottom: 0%;
+}
+
+.social-links {
+   display: flex;
+   justify-content: center;
+
+}
+
+header {
+   grid-area: header;
+   padding-inline: 10px;
+   background-color: #000;
+}
+
+.hero {
+   grid-area: hero;
+   margin-inline: 5%;
+}
+
+.hero img {
+   width: 100%;
+}
+
+.playlist {
+   grid-area: playlist;
+   background-color: #000;
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+   border: #000 solid 3px;
+   border-radius: 3px;
+}
+
+footer {
+   grid-area: footer;
+}
+.about-band{
+   grid-area: text;
+   text-align: justify;
+   background-color: #000;
+   padding: 15px;
+   margin: 15px;
+   border-radius: 5px;
+   text-shadow: #41484e;
+   font-size: larger;
+   line-height: 1.6;
+}
+.title-abt, .history{
+   font-size: 50px;
+   background-color: #41484e;
+   padding: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border: #ffffff solid 2px;
+   border-radius: 3px; 
+}
+.imagen-about{
+   grid-area: imagenAbout;
+   float: right;
+  margin: 5px; 
+  padding: 5px;
+}
+
+.grilla-general {
+   margin-bottom: 10px;
+   display: grid;
+   gap: 20px;
+   grid-template-areas:
+      "header"
+      "hero"
+      "playlist"
+      "footer";
+}
+
+.grid-about{
+   margin-bottom: 10px;
+   display: grid;
+   gap: 20px;
+   grid-template-areas: 
+   "header"
+   "text"
+   "imagenAbout"
+   "footer";
+}
+
+@media (min-width:768px) {
+
+   .grid-about {
+      grid-template-columns: 2fr 2fr 2fr;
+      grid-template-areas:
+      "header header header"
+      "text text imagenAbout"
+      "text text imagenAbout" 
+      "footer footer footer"
+   }
+
+}
+
+/*Escritorio*/
+@media (min-width:1024px) {
+   .grid-about {
+   grid-template-columns: 1fr 1fr;   
+}
+
+
+}
