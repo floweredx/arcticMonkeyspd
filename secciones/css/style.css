@@ -19,6 +19,10 @@ nav ul, a {
    list-style: none;
 
 }
+.formcontact{
+   display: grid;
+   grid-template-columns: 1fr, 1fr, 1fr;
+}
 
 
 nav ul {
@@ -107,9 +111,11 @@ header {
    border: #000 solid 3px;
    border-radius: 3px;
 }
+/* i am in the not main branch */
 
 footer {
    grid-area: footer;
+   background-color: #41484e;
 }
 .about-band{
    grid-area: text;
@@ -173,11 +179,8 @@ footer {
 
 }
 
-/*Escritorio*/
+/* /*Escritorio
 @media (min-width:1024px) {
    .grid-about {
    grid-template-columns: 1fr 1fr;   
-}
-
-
-}
+} */
