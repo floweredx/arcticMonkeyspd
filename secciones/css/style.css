@@ -19,6 +19,11 @@ nav ul, a {
    list-style: none;
 
 }
+.formcontact{
+   display: grid;
+   grid-template-columns: 1fr, 1fr, 1fr;
+}
+
 
 nav ul {
    display: flex;
@@ -91,6 +96,11 @@ header {
 .hero img {
    width: 100%;
 }
+/* .pleaseWork {
+   animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}  doesnt work */
+
+
 
 .playlist {
    grid-area: playlist;
@@ -101,9 +111,11 @@ header {
    border: #000 solid 3px;
    border-radius: 3px;
 }
+/* i am in the not main branch */
 
 footer {
    grid-area: footer;
+   background-color: #41484e;
 }
 .about-band{
    grid-area: text;
@@ -167,11 +179,8 @@ footer {
 
 }
 
-/*Escritorio*/
+/* /*Escritorio
 @media (min-width:1024px) {
    .grid-about {
    grid-template-columns: 1fr 1fr;   
-}
-
-
-}
+} */
