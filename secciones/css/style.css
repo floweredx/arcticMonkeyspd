@@ -9,9 +9,10 @@ body {
    color: whitesmoke;
    font-weight: bold;
    text-align: center;
+   text-decoration: none
 }
 
-nav ul, a {
+/* nav ul, a {
    color: whitesmoke;
    display: flex;
    text-align: center;
@@ -25,7 +26,7 @@ nav ul {
    justify-content: space-around;
    background-color: #000;
 
-}
+} */
 
 main {
    width: 100vw;
@@ -36,10 +37,7 @@ main {
    padding-bottom: 10px;
 }
 
-.page-title {
-   padding-top: 10px;
-   margin-bottom: 10px;
-}
+
 
 .first-link {
    display: flex;
