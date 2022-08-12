@@ -1,16 +1,3 @@
-ul{
-    color: aqua;
-    li{
-        color: wheat;
-    }
-}
-li {
-    color:blue;
-         &:hover{
-              color:red;
-                }
-}
-
 $background: repeating-linear-gradient(to right, #41484e, #41484e 20px, #000 20px, #000 40px);
 
 body{
@@ -28,12 +15,84 @@ body{
     
 }
 
-h1{
-    color: #000;
+
+header {
+    width: 100%;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 2px;
+    background-color: black;
+    nav {
+        width: 100%;   
+        justify-items: center;
+    }
+    .page-title{
+        color: whitesmoke;
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 0;
+    }
+    .list-nav {
+        width: 100%;   
+        padding: 20px 0;
+        list-style-type: none;
+        display: flex;      
+        justify-content: space-around;
+        text-decoration: none;
+        margin-bottom: 0%;
+            a{
+                text-decoration: none;
+                color: whitesmoke;
+
+        }
+     }
 }
 
+.hero {
+    padding: 5px;
+    img{
+        max-width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: black solid 2px;
+    }
+ }
 
+ .playlist{
+    .spotify-pl{
+        background-color: #000;
+        color: whitesmoke;
+        margin: 5px;
+        text-align: center;
+        padding: 5px;
+    }
+ }
 
+.grid-about{
+    background: $background;
+}
 
+.gallery{
 
-
+    .one{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .two{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .three{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
