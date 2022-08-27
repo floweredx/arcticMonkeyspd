@@ -95,16 +95,19 @@ header .list-nav a {
   }
 }
 
+.playlist {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .playlist .spotify-pl {
   background-color: whitesmoke;
   color: whitesmoke;
   text-align: center;
   padding: 5px;
   margin: 0%;
-}
-
-.playlistsp {
-  width: 70%;
 }
 
 .grid-about {
