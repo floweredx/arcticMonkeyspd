@@ -1,19 +1,36 @@
+/* DESKTOP FIRST APPROACH */
 /* CAMBIALE EL FONT PORQUE NO QUEDA LINDO */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
   background: whitesmoke;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  height: auto; }
+  body main {
+    min-height: 80vh; }
 
-.pie {
-  background-color: whitesmoke; }
-  .pie a {
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 5px; }
+#pie {
+  bottom: 0;
+  height: 100px;
+  background-color: grey; }
+  #pie .footer-container {
+    height: 100%;
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #pie .footer-container a {
+      text-decoration: none;
+      color: black;
+      font-size: 5px; }
 
 header {
   width: 100%;
@@ -42,15 +59,21 @@ header {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    -webkit-animation-name: fade;
-    animation-name: fade;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s; }
+    margin-bottom: 30px;
+    margin-top: 30px; }
+    @media (max-width: 768px) {
+      header .list-nav {
+        width: 95%; } }
     header .list-nav a {
       text-decoration: none;
-      color: #3b3b3b; }
+      color: #3b3b3b;
+      transition: all .3s ease-in-out;
+      font-size: 22px; }
+      @media (max-width: 768px) {
+        header .list-nav a {
+          font-size: 12px; } }
+      header .list-nav a:hover {
+        color: black; }
 
 .imagenPrincipal {
   width: 100%;
@@ -58,9 +81,10 @@ header {
   justify-content: center; }
   .imagenPrincipal .pleaseWork {
     width: 80%;
-    margin: auto;
-    /* margin-left: auto;
-    margin-right: auto; */ }
+    margin: auto; }
+    @media (max-width: 768px) {
+      .imagenPrincipal .pleaseWork {
+        width: 100%; } }
   .imagenPrincipal .overlayHero {
     opacity: 100;
     position: absolute; }
@@ -78,11 +102,12 @@ header {
     color: #565656; } }
 
 .playlist {
-  width: 90%;
+  width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 50px; }
   .playlist .spotify-pl {
     background-color: whitesmoke;
     color: whitesmoke;
@@ -93,22 +118,20 @@ header {
 .grid-about {
   background: whitesmoke; }
 
-.gallery .one {
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+/*  GALLERY STYLES  */
+.behind-title {
+  text-align: center; }
 
-.gallery .two {
+.gallery {
   width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.gallery .three {
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-/* why is it not working fuck kjdjfkdj*/
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; }
+  .gallery img {
+    width: 100%; }
+  @media (max-width: 768px) {
+    .gallery {
+      width: 95%;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px; } }
