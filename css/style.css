@@ -1,4 +1,9 @@
 /* CAMBIALE EL FONT PORQUE NO QUEDA LINDO */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
   background: whitesmoke;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
@@ -21,6 +26,9 @@ header {
   header nav {
     width: 100%;
     justify-items: center; }
+    header nav a {
+      text-decoration: none;
+      color: #3b3b3b; }
   header .page-title {
     color: #3b3b3b;
     text-align: center;
@@ -28,35 +36,59 @@ header {
     padding-top: 20px;
     margin-bottom: 0; }
   header .list-nav {
-    width: 100%;
-    padding: 10px 50px;
+    width: 80%;
+    margin: auto;
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-decoration: none;
-    margin-bottom: 0%; }
+    margin-bottom: 20px;
+    margin-top: 20px;
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s; }
     header .list-nav a {
       text-decoration: none;
       color: #3b3b3b; }
 
-.hero {
-  padding: 5px; }
-  .hero img {
-    max-width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: black solid 2px; }
+.imagenPrincipal {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .imagenPrincipal .pleaseWork {
+    width: 80%;
+    margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */ }
+  .imagenPrincipal .overlayHero {
+    opacity: 100;
+    position: absolute; }
+    .imagenPrincipal .overlayHero h2 a {
+      text-decoration: none;
+      color: #565656;
+      animation-name: fade;
+      animation-duration: 1s;
+      font-size: larger; }
 
-.playlist .spotify-pl {
-  background-color: whitesmoke;
-  color: whitesmoke;
-  text-align: center;
-  padding: 5px;
-  margin: 0%; }
+@keyframes fade {
+  from {
+    color: #dbdbdb; }
+  to {
+    color: #565656; } }
 
-.playlistsp {
-  width: 70%; }
+.playlist {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .playlist .spotify-pl {
+    background-color: whitesmoke;
+    color: whitesmoke;
+    text-align: center;
+    padding: 5px;
+    margin: 0%; }
 
 .grid-about {
   background: whitesmoke; }
