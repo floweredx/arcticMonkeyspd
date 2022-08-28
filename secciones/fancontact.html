@@ -31,52 +31,24 @@
     </section>
 
     <section>
-      <article class="form-contact">
-        <form action="#" class="form1">
-          <label for="Name">Name:<br>
-            <input type="text" placeholder="Name"><br>
-          </label>
-          <br>
-          <label for="email">Email:<br>
-            <input type="email" placeholder="youremail@gmail.com" name="email"><br>
-          </label>
-          <br>
-          <label for="age">Age: <br>
-            <input type="number" placeholder="Age"><br> </label>
-          <br>
-          <label for="Observaciones"> Comments:<br>
-            <textarea placeholder="Tell us something"></textarea>
-          </label>
-          <br>
-          <br>
-          <div>
-            <p class="title-form">Pick the album you like the most:</p>
-            <br>
-            <div>WPSIATWIN
-              <input type="radio" name="album" value="WPSIATWIN">
-            </div>
-            <br>
-            <div>FWN
-              <input type="radio" name="album" value="FWM">
-            </div>
-            <br>
-            <div>Humbug
-              <input type="radio" name="album" value="humbug">
-            </div>
-            <br>
-            <div>SAS
-              <input type="radio" name="album" value="SAS">
-            </div>
-            <br>
-            <div>AM
-              <input type="radio" name="album" value="AM">
-            </div>
-            <br>
-            <div>TBHAC
-              <input type="radio" name="album" value="TBHAC">
-            </div>
-          </div>
-          <br>
+      <form action="#" class="form-contact">
+        <label for="Name">Name:<br>
+          <input type="text" placeholder="Name" class="written-inputs"><br>
+        </label>
+
+        <label for="email">Email:<br>
+          <input type="email" placeholder="youremail@gmail.com" name="email" class="written-inputs"><br>
+        </label>
+
+        <label for="age">Age: <br>
+          <input type="number" placeholder="Age" class="written-inputs"><br> 
+        </label>
+
+        <label for="Observaciones"> Comments:<br>
+          <textarea placeholder="Tell us something"></textarea>
+        </label>
+
+        <div class="favorite">
           <p class="title-form">Who is your favorite member</p>
           <select name="member" id="member">
             <option value="Alex">Alex</option>
@@ -84,15 +56,18 @@
             <option value="Jamie">Jamie</option>
             <option value="Nick">Nick</option>
           </select>
-          <br>
-          <p class="title-form">Do you wish to receive news and updates?
-            <input type="checkbox" name="acepta" value="1">
-          </p>
-          <br>
+        </div>
+
+        <div class="recieve-updates">
+          <p class="title-form">Do you wish to receive news and updates?</p>
+          <input type="checkbox" name="acepta" value="1">
+        </div>
+
+        <div class="submits">
           <input type="submit" value="Send">
           <input type="reset" value="Clear">
-        </form>
-      </article>
+        </div>
+      </form>
     </section>
   </main>
 
