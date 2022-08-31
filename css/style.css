@@ -5,101 +5,139 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   background: whitesmoke;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   position: relative;
   min-height: 100vh;
-  height: auto; }
-  body main {
-    min-height: 80vh; }
+  height: auto;
+}
+body main {
+  min-height: 80vh;
+}
 
 #pie {
   bottom: 0;
   height: 100px;
-  background-color: grey; }
-  #pie .footer-container {
-    height: 100%;
-    width: 80%;
-    margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    #pie .footer-container a {
-      text-decoration: none;
-      color: black;
-      font-size: 5px; }
+  background-color: grey;
+}
+#pie .footer-container {
+  height: 100%;
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pie .footer-container .social-links {
+  font-size: 15px;
+}
+#pie .footer-container a {
+  text-decoration: none;
+  color: black;
+  font-size: 5px;
+}
 
 header {
   width: 100%;
   display: flex;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   align-items: center;
   letter-spacing: 2px;
-  background-color: whitesmoke; }
-  header nav {
-    width: 100%;
-    justify-items: center; }
-    header nav a {
-      text-decoration: none;
-      color: #3b3b3b; }
-  header .page-title {
-    color: #3b3b3b;
-    text-align: center;
-    padding: 5px;
-    padding-top: 20px;
-    margin-bottom: 0; }
+  background-color: whitesmoke;
+}
+header nav {
+  width: 100%;
+  justify-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+header .page-title {
+  color: #3b3b3b;
+  text-align: center;
+  padding: 5px;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+header .list-nav {
+  width: 80%;
+  margin: auto;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
   header .list-nav {
-    width: 80%;
-    margin: auto;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    margin-bottom: 30px;
-    margin-top: 30px; }
-    @media (max-width: 768px) {
-      header .list-nav {
-        width: 95%; } }
-    header .list-nav a {
-      text-decoration: none;
-      color: #3b3b3b;
-      transition: all .3s ease-in-out;
-      font-size: 22px; }
-      @media (max-width: 768px) {
-        header .list-nav a {
-          font-size: 12px; } }
-      header .list-nav a:hover {
-        color: black; }
+    width: 95%;
+  }
+}
+header .list-nav a {
+  text-decoration: none;
+  color: #3b3b3b;
+  transition: all 0.3s ease-in-out;
+  font-size: 22px;
+}
+@media (max-width: 768px) {
+  header .list-nav a {
+    font-size: 12px;
+  }
+}
+header .list-nav a:hover {
+  color: black;
+}
 
 .imagenPrincipal {
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+}
+.imagenPrincipal .pleaseWork {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 768px) {
   .imagenPrincipal .pleaseWork {
-    width: 80%;
-    margin: auto; }
-    @media (max-width: 768px) {
-      .imagenPrincipal .pleaseWork {
-        width: 100%; } }
-  .imagenPrincipal .overlayHero {
-    opacity: 100;
-    position: absolute; }
-    .imagenPrincipal .overlayHero h2 a {
-      text-decoration: none;
-      color: #565656;
-      animation-name: fade;
-      animation-duration: 1s;
-      font-size: larger; }
-
+    width: 100%;
+  }
+}
+.imagenPrincipal .overlayHero {
+  opacity: 100;
+  position: absolute;
+}
+.imagenPrincipal .overlayHero h2 a {
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  font-size: larger;
+}
+@-webkit-keyframes fade {
+  from {
+    color: rgb(219, 219, 219);
+  }
+  to {
+    color: rgb(86, 86, 86);
+  }
+}
 @keyframes fade {
   from {
-    color: #dbdbdb; }
+    color: rgb(219, 219, 219);
+  }
   to {
-    color: #565656; } }
+    color: rgb(86, 86, 86);
+  }
+}
 
 .playlist {
   width: 80%;
@@ -107,38 +145,47 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px; }
-  .playlist .spotify-pl {
-    background-color: whitesmoke;
-    color: whitesmoke;
-    text-align: center;
-    padding: 5px;
-    margin: 0%; }
+  margin-bottom: 50px;
+}
+.playlist .spotify-pl {
+  background-color: whitesmoke;
+  color: whitesmoke;
+  text-align: center;
+  padding: 5px;
+  margin: 0%;
+}
 
 .grid-about {
-  background: whitesmoke; }
+  background: whitesmoke;
+}
 
 /*  GALLERY STYLES  */
 .behind-title {
-  text-align: center; }
+  text-align: center;
+}
 
 .gallery {
   width: 80%;
   margin: 30px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; }
-  .gallery img {
-    width: 100%; }
-  @media (max-width: 768px) {
-    .gallery {
-      width: 95%;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 10px; } }
+  gap: 20px;
+}
+.gallery img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .gallery {
+    width: 95%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
 
 /*  CONTACT FORM  */
 .fan-contact {
-  text-align: center; }
+  text-align: center;
+}
 
 .form-contact {
   width: 80%;
@@ -147,74 +194,167 @@ header {
   border-radius: 20px;
   box-shadow: 1px 6px 21px 0px rgba(0, 0, 0, 0.42);
   margin-top: 30px;
-  padding: 30px; }
-  .form-contact label {
-    font-size: 22px;
-    color: black; }
-  .form-contact .written-inputs {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    border: 1px solid grey;
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 20px; }
-    .form-contact .written-inputs:focus {
-      outline: 1px solid black; }
-  .form-contact textarea {
-    border: 1px solid grey;
-    border-radius: 8px;
-    resize: none;
-    padding: 10px;
-    width: 100%;
-    margin-top: 10px;
-    height: 200px;
-    margin-bottom: 20px; }
-    .form-contact textarea:focus {
-      outline: 1px solid black; }
-  .form-contact .favorite {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    margin-bottom: 20px; }
-    .form-contact .favorite select {
-      padding: 5px;
-      border: 1px solid grey;
-      border-radius: 5px; }
-      .form-contact .favorite select:focus {
-        outline: 1px solid black; }
-  .form-contact .recieve-updates {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    margin-bottom: 40px; }
-  .form-contact .submits {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; }
-    .form-contact .submits input[type="submit"] {
-      font-size: 18px;
-      padding: 10px 25px;
-      border: 1px solid rgba(43, 170, 43, 0.893);
-      border-radius: 10px;
-      background-color: rgba(43, 170, 43, 0.893);
-      color: white;
-      cursor: pointer;
-      transition: all .3s ease-in-out; }
-      .form-contact .submits input[type="submit"]:hover {
-        background-color: rgba(65, 173, 65, 0.893); }
-    .form-contact .submits input[type="reset"] {
-      font-size: 18px;
-      padding: 10px 25px;
-      border: 1px solid rgba(213, 71, 71, 0.848);
-      border-radius: 10px;
-      background-color: rgba(213, 71, 71, 0.848);
-      color: white;
-      cursor: pointer;
-      transition: all .3s ease-in-out; }
-      .form-contact .submits input[type="reset"]:hover {
-        background-color: rgba(231, 79, 79, 0.848); }
+  padding: 30px;
+}
+.form-contact label {
+  font-size: 22px;
+  color: black;
+}
+.form-contact .written-inputs {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.form-contact .written-inputs:focus {
+  outline: 1px solid black;
+}
+.form-contact textarea {
+  border: 1px solid grey;
+  border-radius: 8px;
+  resize: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+.form-contact textarea:focus {
+  outline: 1px solid black;
+}
+.form-contact .favorite {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.form-contact .favorite select {
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.form-contact .favorite select:focus {
+  outline: 1px solid black;
+}
+.form-contact .recieve-updates {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.form-contact .submits {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.form-contact .submits input[type=submit] {
+  font-size: 18px;
+  padding: 10px 25px;
+  border: 1px solid rgba(43, 170, 43, 0.893);
+  border-radius: 10px;
+  background-color: rgba(43, 170, 43, 0.893);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.form-contact .submits input[type=submit]:hover {
+  background-color: rgba(65, 173, 65, 0.893);
+}
+.form-contact .submits input[type=reset] {
+  font-size: 18px;
+  padding: 10px 25px;
+  border: 1px solid rgba(213, 71, 71, 0.848);
+  border-radius: 10px;
+  background-color: rgba(213, 71, 71, 0.848);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.form-contact .submits input[type=reset]:hover {
+  background-color: rgba(231, 79, 79, 0.848);
+}
+
+/* DISCOGRAPHY STYLES */
+.discography-list {
+  width: 80%;
+  margin-inline: auto;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 1px 6px 21px 0px rgba(0, 0, 0, 0.42);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.discography-list .titulo-2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #3b3b3b;
+  background-color: whitesmoke;
+  margin: 5px;
+}
+.discography-list .studio-title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #3b3b3b;
+  background-color: whitesmoke;
+  margin: 5px;
+}
+.discography-list ul {
+  list-style: none;
+  color: #3b3b3b;
+}
+.discography-list a {
+  text-decoration: none;
+  list-style: none;
+  color: #3b3b3b;
+}
+
+/*ABOUT*/
+.about-band {
+  width: 90%;
+  margin-inline: auto;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 1px 6px 21px 0px rgba(0, 0, 0, 0.42);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.about-band h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #3b3b3b;
+  background-color: whitesmoke;
+  margin: 5px;
+  font-size: larger;
+}
+
+.imagen-about img {
+  width: 50%;
+  display: flex;
+}
+
+.about-members {
+  width: 90%;
+  margin-inline: auto;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 1px 6px 21px 0px rgba(0, 0, 0, 0.42);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.about-members h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #3b3b3b;
+  background-color: whitesmoke;
+  margin: 5px;
+  font-size: larger;
+}
+.about-members ul {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */
