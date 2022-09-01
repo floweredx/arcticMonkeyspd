@@ -7,6 +7,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+$outline: 1px solid black;
+
 
 body {
   background: whitesmoke;
@@ -35,15 +37,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .social-links {
-      font-size: 15px;
+    .social-links{
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 1px;
     }
+
+
 
     a {
       text-decoration: none;
       color: black;
-      font-size: 5px;
+      font-size: 25px;
     }
   }
 
@@ -74,6 +79,7 @@ header {
     padding: 5px;
     padding-top: 20px;
     margin-bottom: 0;
+    font-size: xx-large;
   }
 
   .list-nav {
@@ -175,9 +181,7 @@ header {
 
 /*  GALLERY STYLES  */
 
-.behind-title {
-  text-align: center;
-}
+
 
 .gallery {
   width: 80%;
@@ -209,6 +213,7 @@ header {
   border-radius: 20px;
   box-shadow: 1px 6px 21px 0px rgba(0, 0, 0, 0.42);
   margin-top: 30px;
+  margin-bottom: 30px;
   padding: 30px;
 
   label {
@@ -226,7 +231,7 @@ header {
     margin-bottom: 20px;
 
     &:focus {
-      outline: 1px solid black;
+      outline: $outline;
     }
   }
 
@@ -245,6 +250,7 @@ header {
     }
   }
 
+
   .favorite {
     display: flex;
     align-items: center;
@@ -261,6 +267,9 @@ header {
         outline: 1px solid black;
       }
     }
+  }
+  .fan-contact{
+    color: #3b3b3b;
   }
 
   .recieve-updates {
@@ -385,7 +394,11 @@ header {
 
 .imagen-about{
     img{
-      width: 50%;
+      width: 90%;
+      margin-inline: auto;
+      background-color: whitesmoke;
+      border-radius: 20px;
+      @include shadow;
     display: flex;
     }
   }
